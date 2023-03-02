@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <h1>Cricket Game</h1>
+    <div id = "information">
+        <!-- <p>Name <span>Roll Number</span> <span>Score</span></p> -->
+        <p id="name">Name</p>
+        <p id="roll">Roll Number</p>
+        <p id="score">Score: <span id="current_score"></span></p>
+    </div>
+    <div id="message">
+        <p id="message_text"></p>
+    </div>
+    <div id="play">
+        <div id="bat"></div>
+        <div id="ball">
+            <div class="position">
+                <div id="ball1"></div>
+                <div class="position-text">
+                    <p>Position 1</p>
+                </div>
+            </div>
+            <div class="position">
+                <div id="ball2"></div>
+                <div class="position-text">
+                    <p>Position 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body{
+    background-image: url("../data/Background-Odd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#information{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#information p{
+    background-color: rgba(0,0,0,0.5);
+    font-size: 15px;
+    font-weight: bold;
+    color: wheat;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
+#information p span{
+    color: red;
+    font-weight: bolder;
+}
+h1{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#bat{
+    background-image: url("../data/Player1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20px;
+    width: 250px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#ball{
+    /* position both balls at the left of screen and in column */
+    position: absolute;
+    left: 65%;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+.position{
+    /* positon both divs infront of each other */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.position-text{
+    font-size: 26px;
+    font-weight: bolder;
+    color: wheat;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#ball1{
+    background-image: url("../data/ball.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0,0,0,0.5);
+}
+#ball2{
+    background-image: url("../data/ball.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+}
+
+
+

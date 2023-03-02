@@ -1,0 +1,49 @@
+body{
+    background-image: url("../data/Background-Odd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#information{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+input{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.invalid-input{
+    border: 2px solid red;
+}
+
+#start{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px ;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    /* center the image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+#bold{
+    font-weight: bold;
+    text-decoration: double;
+    font-size: large;
+}
