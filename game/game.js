@@ -21,14 +21,10 @@ function detectCollision(ball, bat) {
     );
   
 }
-
 function throwBall() {
 
     
-    let selected_position = getPositionValue();
-    console.log(selected_position);
 
-    const ball = document.querySelector(`#ball${selected_position}`);
 
 
     let ball_position = ball.getBoundingClientRect();
@@ -45,20 +41,21 @@ function throwBall() {
     ball.style.transition = "transform 0.5s ease-in-out";
     ball.style.zIndex = "1";
 
-
     
-    if (detectCollision(ball, bat)) {
-        score += 8;
-        document.getElementById("current_score").innerHTML = ` ${score}`;
-        //document.getElementById("start_button").classList.add("hide_button");
-        console.log("collision detected");
-    }
-    else{
-        // score -= 2;
-        // document.getElementById("current_score").innerHTML = ` ${score}`;
-        // //document.getElementById("start_button").classList.add("hide_button");
-        console.log("collision not detected");
-    }
+    //console.log("bat clicked: ", bat_clicked);
+    
+    // if (detectCollision(ball, bat) ) {
+    //     score += 8;
+    //     document.getElementById("current_score").innerHTML = ` ${score}`;
+    //     //document.getElementById("start_button").classList.add("hide_button");
+    //     //console.log("collision detected");
+    // }
+    // else{
+    //     // score -= 2;
+    //     // document.getElementById("current_score").innerHTML = ` ${score}`;
+    //     // //document.getElementById("start_button").classList.add("hide_button");
+    //     //console.log("collision not detected");
+    // }
         
 }
 
@@ -106,9 +103,10 @@ function startGame() {
             document.getElementById("start_button").disabled = true;
             document.getElementById("start_button").classList.add("disable_button");
             //console.log("iteration: ", iteration);
-
+            
             throwBall();
             iteration++;
+            
         }
         else{
             clearInterval(interval);
@@ -118,21 +116,35 @@ function startGame() {
             if(score == 58){
                 alert("Congrats! You won the game");
             }
+            else{
+                alert("Alas! You were unable to play all the balls");
+            }
             score = 10;
             document.getElementById("current_score").innerHTML = ` ${score}`;
         }
     }, speed);
 }
 
-function batClicked(){
-    // return true if bat is clicked
-    let bat_clicked = false;
-    bat.addEventListener("click", function(){
-        console.log("bat clicked");
+
+
+
+let selected_position = getPositionValue();
+
+const ball = document.querySelector(`#ball${selected_position}`);
+
+let bat_clicked = false;
+document.addEventListener("keydown", function(event){
+    if(event.key === "Enter" && detectCollision(ball, bat)){
+        console.log("enter key pressed");
         bat_clicked = true;
-    });
-    return bat_clicked;
-}
+    
+        score += 8;
+        document.getElementById("current_score").innerHTML = ` ${score}`;
+    }
+});
+
+
+
 
 
 
