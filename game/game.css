@@ -11,17 +11,22 @@ body{
     align-items: center;
 }
 
-#information p{
+#information p,#instructions{
     background-color: rgba(0,0,0,0.5);
     font-size: 15px;
     font-weight: bold;
     color: wheat;
     text-align: center;
     padding: 10px;
-    margin: 10px;
+    margin: 7px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 10px;
     border: 2px solid rgba(0,0,0,0.5);
+}
+
+#instructions:hover{
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
 }
 
 #information p span{
@@ -44,19 +49,19 @@ h1{
     margin-top: 20px;
     width: 250px;
     height: 400px;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.5); */
 }
 
 #ball{
     /* position both balls at the left of screen and in column */
     position: absolute;
     left: 65%;
-    top: 35%;
+    top: 43%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    gap: 40px;
+    gap: 35px;
     
 }
 
@@ -84,7 +89,7 @@ h1{
     background-size: contain;
     width: 70px;
     height: 70px;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.5); */
 }
 #ball2{
     background-image: url("../data/ball.png");
@@ -94,5 +99,124 @@ h1{
     height: 70px;
 }
 
+.info_box{
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 40%;
+    left: 40%;
 
+}
 
+.activeInfo{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.info_box .info-title{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.info_box .info-list{
+    padding: 15px 30px;
+}
+
+.info_box .info-list .info{
+    margin: 5px 0;
+    font-size: 17px;
+    color: black;
+}
+
+.info_box .info-list .info span{
+    font-weight: 600;
+    color: #007bff;
+}
+.info_box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+    color: #007bff;
+}
+
+#start_button{
+    background-color: rgba(0,0,0,0.5);
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid rgba(0,0,0,0.5);
+}
+
+#start{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.hide_button{
+    opacity: 0;
+}
+
+#start p{
+    color: wheat;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="radio"]{
+    accent-color: wheat;
+    color: wheat;
+} 
+body{
+    color: whitesmoke;
+}
+
+.disable_button{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#start_button:hover{
+    background-color: rgba(0,0,0,0.7);
+    cursor: pointer;
+}

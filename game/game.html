@@ -9,12 +9,38 @@
     <h1>Cricket Game</h1>
     <div id = "information">
         <!-- <p>Name <span>Roll Number</span> <span>Score</span></p> -->
+        <button id="instructions">Instructions</button>
         <p id="name">Name</p>
         <p id="roll">Roll Number</p>
         <p id="score">Score: <span id="current_score"></span></p>
     </div>
-    <div id="message">
-        <p id="message_text"></p>
+        <!-- Info Box -->
+        <div class="info_box">
+            <div class="info-title"><span>Some Rules of this Game</span></div>
+            <hr>
+            <div class="info-list">
+                <div class="info">1. You can click the ball to select the different position.</div>
+                <div class="info">2. Ball will be arriving at 2 different speeds.</div>
+                <div class="info">3. There are 6 balls in an over</div>
+                <div class="info">4. Not clicking the bat will result in miss ball</div>
+                <div class="info">5. Scores are updated accordingly</div>
+            </div>
+            <div class="buttons">
+                <button class="close">Close</button>
+            </div>
+        </div>
+    <div id="start">
+        <form name="posform" class="form">
+            <p>Choose the ball position</p>
+            <input type="radio" name="position" value="1" checked> Position 1
+            <input type="radio" name="position" value="2"> Position 2
+        </form>
+        <button id="start_button">Start Game</button>
+        <form name="speedform" class="form">
+            <p>Choose the ball speed</p>
+            <input type="radio" name="speed" value="slow" checked> Slow
+            <input type="radio" name="speed" value="fast"> Fast
+        </form>
     </div>
     <div id="play">
         <div id="bat"></div>
